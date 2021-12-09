@@ -6,7 +6,6 @@ from .worker import *
 
 import os
 from script import Script
-from pyrogram import Client as Bot, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from .worker import *
 
