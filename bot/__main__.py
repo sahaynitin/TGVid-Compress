@@ -86,7 +86,11 @@ async def _(e):
     
 
 ########## Direct ###########
-
+@bot.on(events.NewMessage(pattern="/start"))
+async def _(e):
+    if str(e.sender_id) not in OWNER and e.sender_id !=DEV:
+        return e.reply("**Sorry You're not An Authorised User!**")
+    await start(e)
 @bot.on(events.NewMessage(pattern="/eval"))
 async def _(e):
     await eval(e)
