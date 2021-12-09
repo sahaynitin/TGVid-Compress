@@ -18,9 +18,6 @@ except Exception as er:
 
 ####### GENERAL CMDS ########
 
-@bot.on(events.NewMessage(pattern="/start"))
-async def _(e):
-    await start(e)
 
 
 @bot.on(events.NewMessage(pattern="/setcode"))
